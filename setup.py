@@ -15,8 +15,6 @@ setup(
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
-        'Intended Audience :: Data Scientists',
-        'Topic :: Data Exploration',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3.7'
     ],
