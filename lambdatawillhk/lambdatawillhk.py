@@ -1,7 +1,6 @@
 import pandas as pd
 
 class LambData:
-    
     def __init__(self):
         pass
     
@@ -35,11 +34,12 @@ class LambData:
         question_marks = self.check_categoricals_for_question_marks(df)
         if nulls.sum().sum() > 0:
             print('This dataframe has null values.')
-        if blanks.sum().sum() > 0:
+        elif blanks.sum().sum() > 0:
             print('This dataframe has categorical columns with empty strings as values.')
-        if question_marks.sum().sum() > 0:
+        elif question_marks.sum().sum() > 0:
             print('This dataframe has categorical columns with lone question marks as values.')
-    
+        else:
+            print('This dataframe has no obvious null or missing values.')
     def add_column_to_df(self, df: pd.DataFrame, new_col: list, name: str):
         df = df.copy()
         new_col = pd.Series(new_col)

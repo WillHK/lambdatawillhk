@@ -1,1 +1,1 @@
-from lambdatawillhk import LambData
+from .lambdatawillhk import LambData
